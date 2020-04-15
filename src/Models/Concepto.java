@@ -5,6 +5,7 @@ private String codconcepto;
 private String descripcion;
 private int tipo;
 private String codtercero;
+
 public Concepto(String codconcepto, String descripcion, int tipo, String codtercero) {
 	super();
 	this.codconcepto = codconcepto;

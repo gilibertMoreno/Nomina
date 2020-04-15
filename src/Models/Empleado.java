@@ -1,6 +1,6 @@
 package Models;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class Empleado {
 private String codigo;
@@ -9,6 +9,10 @@ private String nombre;
 private Date fechanacimiento;
 private Date fechaingreso;
 private Date fecharetiro;
+
+public Empleado() {
+
+}
 public Empleado(String codigo, String cedula, String nombre, Date fechanacimiento, Date fechaingreso,
 		Date fecharetiro) {
 	super();
