@@ -35,15 +35,17 @@
   <div id="container">
 
 
-  <form action="#" method="post" id="contact_form">
-   
+  <form action="EmpleadoC" method="post" id="contact_form">
+   <input type="hidden"  name="opcion" value="registro"      >
       <label for="codigo"></label>
-      <input type="text" placeholder="Codigo Empleado" name="codigo" id="codioEmpleado" required
-      >
+      <input type="text" placeholder="Codigo Empleado" name="codigo" id="codioEmpleado" required>
 
     
       <label for="cedula"></label>
       <input type="text" placeholder="cedula Empleado" name="cedula" id="cedulaEmpleado" required>
+      
+      <label for="nombre"></label>
+      <input type="text" placeholder="Nombre Empleado" name="nombre" id="nombreEmpleado" required>
    
 
     
@@ -67,10 +69,10 @@
   <table style="width:100%">
   <tr>
     <th> 
-  <a class="boton_personalizado" href="buscarEmpleado.html">Registrar</a>
+  <button class="boton_personalizado" type="submit" >Registrar</button>
     </th>
     <th>
-    <a class="boton_personalizado" href="OpcionesEmpleado.html">Volver</a>
+    <a class="boton_personalizado" href="OpcionesEmpleado.jsp">Volver</a>
     </th>
    
   </tr>

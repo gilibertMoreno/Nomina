@@ -43,7 +43,7 @@ public class EmpleadoDaoMySQL implements EmpleadoDao {
 			res.close();
 
 		} catch (SQLException e) {
-			System.out.println("Error: Clase ClienteDaoImple, método obtener");
+			System.out.println("Error: Clase EmpleadoDaoImple, método obtener");
 			e.printStackTrace();
 		}
 		return Empleados;
@@ -55,7 +55,7 @@ public class EmpleadoDaoMySQL implements EmpleadoDao {
 	public Empleado obtener(int id) {
 		// TODO Auto-generated method stub
 		try {
-     	   ResultSet res = cn.query("SELECT * FROM Empleado where id = " + id + " ");
+     	   ResultSet res = cn.query("SELECT * FROM Empleado where codigo = " + id + " ");
      	   while(res.next()){
 	        	    Empleado Empleado = new Empleado();
 	        	    Empleado.setCodigo(res.getString("codigo"));
@@ -99,7 +99,7 @@ public class EmpleadoDaoMySQL implements EmpleadoDao {
 		// TODO Auto-generated method stub
 		
 		String sql="UPDATE Empleado SET codigo='"+Empleado.getCodigo()+"', cedula='"+Empleado.getCedula()+"', "
-				+ "nombre='"+Empleado.getNombre()+"', fechanacimiento='"+Empleado.getFechanacimiento()+"', fechanacimiento='"+Empleado.getFechaingreso()+"', fechanacimiento='"+Empleado.getFecharetiro()+"'" +" WHERE id="+Empleado.getCodigo();
+				+ "nombre='"+Empleado.getNombre()+"', fechanacimiento='"+Empleado.getFechanacimiento()+"', fechanacimiento='"+Empleado.getFechaingreso()+"', fechanacimiento='"+Empleado.getFecharetiro()+"'" +" WHERE codigo="+Empleado.getCodigo();
 		try {
 			cn.insert(sql);
 		} catch (SQLException e) {

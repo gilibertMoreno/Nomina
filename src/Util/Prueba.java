@@ -16,16 +16,21 @@ public class Prueba {
 	public static void main(String[] args) {
        EmpleadoDao pDao = new EmpleadoDaoMySQL();
 		
-		Empleado n = new Empleado();
-		n.setCodigo("1234");
-		n.setCedula("12345678899");
-		n.setNombre("gilmor");
-		n.setFechanacimiento(null);
-		n.setFechaingreso(null);
-		n.setFecharetiro(null);
+		
+		  Empleado n = new Empleado(); n.setCodigo("10000"); n.setCedula("1212121");
+		  n.setNombre("martha"); n.setFechanacimiento(null); n.setFechaingreso(null);
+		  n.setFecharetiro(null);
+		  
+		  
+		  pDao.insertar(n);
+		 
+		
+		Empleado e1=pDao.obtener(51216);
+		System.out.print(e1.toString());
+		
+		e1.toString();
 		
 		
-		pDao.insertar(n);
 		/*
 		 * // objeto para manipular el dao ParticipanteDao pDao = new
 		 * ParticipanteDaoMySQL();
